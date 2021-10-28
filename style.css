@@ -9,25 +9,39 @@
     padding: 0;
      list-style: none;
     text-decoration: none;
-    /* box-sizing: border-box; */
+    /* box-sizing: border-box; */   
  }      
 
- .nav-menu{
-     position: fixed;
- }
-
- .menu{
-    background-color: #d61a1a;
-    overflow:hidden;
-    /* position:fixed; */
-    /* width: 100%; */
-    border: #36ABD9;
-    
+/* SE TIVER DANDO PROBLEMA DE TAMANHOOS DO SITE, REMOVER ESSE HTML E O BODY */
+html{
+    width: 100%;
 }
 
-.menu a
-{
-    
+body{
+    width: 100%;
+}
+
+ .menu{
+    width: 100%;
+    height: 80px;
+    position: relative;
+    top:50px;
+    /* background-color: rgba(0,0,0, .4); */
+    z-index: 1;
+}
+
+.menuSecundario{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top:50px;
+    /* background-color: red; */
+    z-index: 1;
+}
+
+
+
+.menu a{
     color: rgb(255, 255, 255);
     float: right;
     text-decoration: none;
@@ -40,13 +54,22 @@
     color:#36ABD9;
 }
 
+.menu img{
+    left: 10%;  
+    top: -8%;
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    /* background-color: red; */
+    animation: moveBanner 1s 0.5s forwards;
+}
 
 .FixoNoTopo{
 	position: fixed;
 	top:0px;
 }
 
- 
+
  
 .Menuhamburger
 {
@@ -74,29 +97,49 @@
 header
 {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
     position: relative;
+   
 }
 
-.img-wrapper 
+
+.img-wrapper1
 {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  /* background-color: #2b2b2b; */
+  width: 90%;
+  height: 90%;
+  overflow:hidden;
+  /* background-color: #b81111; */
   position: relative;
+  margin-top: -8%;
+  animation: moveBanner 1s 0.5s forwards;
 }
-
-.img-wrapper img
+.img-wrapper1 img
 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* opacity: 0.5;
-    animation: zoom 25s; */ 
-    position: relative;
+    position:static;
 }
+
+
+.img-wrapper2
+{
+  width: 90%;
+  height: 90%;
+  overflow:hidden;
+  /* background-color: #b81111; */
+  position: relative;
+  margin-top: -10%;
+}
+.img-wrapper2 img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position:static;
+}
+
 
 
 @keyframes zoom
@@ -169,8 +212,6 @@ header
 
 .banner button
 {
-    font-family: "Mulish", serif;
-    color: #fff;
     text-transform: uppercase;
     letter-spacing: .2;
     background: #2b2b2b;
@@ -189,11 +230,97 @@ header
     color: #fff;
 }
 
-.banner button:hover
-{
-    color:black;
+#link-top{
+    position: fixed;
+    right: 1rem;
+    /* bottom: 2rem; */
+    width: 1rem;
+    height: 1rem;
+    background: #36ABD9;
+    border-color:#36ABD9;
+    border-width:3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50px;
+    left: 92.3%;
+    top: 49%;
+    animation: moveBanner 1s 0.5s forwards;
+    z-index: 1;
 }
 
+#link-top2{
+    position: fixed;
+    right: 1rem;
+    /* bottom: 2rem; */
+    width: 1rem;
+    height: 1rem;
+    background: #fff;
+    border-color:#36ABD9;
+    border-width:3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50px;
+    left: 92.3%;
+    top: 53%;
+    z-index: 1;
+    animation: moveBanner 1s 0.5s forwards;
+}
+
+#link-top3{
+    position: fixed;
+    right: 1rem;
+    /* bottom: 2rem; */
+    width: 1rem;
+    height: 1rem;
+    background: #fff;
+    border-color:#36ABD9;
+    border-width:3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50px;
+    left: 92.3%;
+    top: 57%;
+    z-index: 1;
+    animation: moveBanner 1s 0.5s forwards;
+}
+
+#link-top4{
+    position: fixed;
+    right: 1rem;
+    /* bottom: 2rem; */
+    width: 1rem;
+    height: 1rem;
+    background: #fff;
+    border-color:#36ABD9;
+    border-width:3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50px;
+    left: 92.3%;
+    top: 61%;
+    z-index: 1;
+    animation: moveBanner 1s 0.5s forwards;
+}
+
+.sessao-home{
+    /* background-color: blue; */
+    width: 100%;
+    height: 100%;
+}
+
+.sessao-sobre{
+    /* background-color: red; */
+    bottom:-130px;
+    position: relative;
+}
 .sobre h1{
     color:#ffffff;
     font-size: 4.0rem;
@@ -208,10 +335,9 @@ header
 .sessao-sobre h1{
     color:#ffffff;
     font-size: 4.0rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 200;
-    top: 150%;
-    left: 48%;
+    top: 28%;
+    left: 40%;
     animation: moveBanner 1s 0.5s forwards;
     text-align: center;
     position: absolute;
@@ -220,10 +346,9 @@ header
 .sessao-sobre h2{
     color:#36ABD9;
     font-size: 4.0rem;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 200;
-    top: 160%;
-    left: 48%;
+    top: 38%;
+    left: 40%;
     animation: moveBanner 1s 0.5s forwards;
     text-align: center;
     position: absolute;
@@ -232,15 +357,17 @@ header
 .sessao-sobre p{
     color: #fff;
     text-align: left;
-    top: 160%;
-    left: 55%;
+    top: 35%;
+    left: 58%;
+    width: 30%;
     position: absolute;
     justify-content: center;
+    animation: moveBanner 1s 0.5s forwards;
+
 }
 
 .trafego button
 {
-    font-family: "Mulish", serif;
     color: #fff;
     letter-spacing: .2;
     background: #2b2b2b;
@@ -251,8 +378,8 @@ header
     cursor:pointer;
     opacity: 0;
     animation: moveBanner 1s 0.9s forwards;
-    top: 200%;
-    left: 48%;
+    top: 70%;
+    left: 45%;
     position: absolute;
     align-items: center;
 }
@@ -263,7 +390,6 @@ header
 
 .sobredois button
 {
-    font-family: "Mulish", serif;
     color: #fff;
     letter-spacing: .2;
     background: #2b2b2b;
@@ -274,11 +400,16 @@ header
     cursor:pointer;
     opacity: 0;
     animation: moveBanner 1s 0.9s forwards;
-    top: 200%;
-    left: 65%;
+    top: 70%;
+    left: 60%;
     position: absolute;
     text-align: center;
 }
+
+
+
+
+
 
 
 @keyframes moveBanner 
@@ -309,7 +440,10 @@ html {
 
 
 
-/* AQUI FAÇO A RESPONSIVDADE */
+
+
+
+/* AQUI FAÇO A RESPONSIVDADE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 @media (max-width: 600px)  {
 
     html {

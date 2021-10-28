@@ -7,17 +7,17 @@ hamburguer.addEventListener("click", function()
 
 
 
-window.onscroll=function(){
-    fixarMenuNoTopo();
-}
-const menu=document.getElementsByTagName("menu")[0];
-const topoNav=menu.offsetTop;
+// window.onscroll=function(){
+//     fixarMenuNoTopo();
+// }
+// const menu=document.getElementsByTagName("menu")[0];
+// const topoNav=menu.offsetTop;
 
-function fixarMenuNoTopo(){
-	if(window.pageYOffset >= topoNav){
-	nav.classList.add("FixoNoTopo");
-	}else{
-	        nav.classList.remove("FixoNoTopo");
-    }
+// function fixarMenuNoTopo(){
+// 	if(window.pageYOffset >= topoNav){
+// 	nav.classList.add("FixoNoTopo");
+// 	}else{
+// 	        nav.classList.remove("FixoNoTopo");
+//     }
 
-}           
+// }           

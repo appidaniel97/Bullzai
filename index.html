@@ -16,9 +16,22 @@
             background-color: #2b2b2b;
         }
         
-        banner h1{
+        @font-face{
             font-family: Gotham;
-            src:url('Gotham-Bold.otf')
+            src: url('Fonts/Gotham-Bold.otf') format('opentype'),
+            url('Fonts/GothamBold.ttf') format('truetype');
+        }
+        h1 {
+            font-family: 'Gotham';
+        }
+        a{
+            font-family: 'Gotham';
+        }
+        h2{
+            font-family: 'Gotham'; 
+        }
+        p{
+            font-family: 'Gotham';
         }
 
 
@@ -28,20 +41,35 @@
 
 <body>  
     
-     <aside class="sidebar">
+     <!-- <aside class="sidebar"> -->
         <nav>
             <ul class="menu">
-                <!-- <div class="logo"><img src="Imagens/Logo_Bullzai.png" alt=""></div> -->
+                <div class="logo"><img src="Imagens/Logo_Bullzai.png" alt=""></div>
                 <li class="menu-item"><a href="#conhecimentos" class="menu-link">CONTATO</a></li>
                 <li class="menu-item"><a href="#portfolio" class="menu-link">PORTFOLIO</a></li>
                 <li class="menu-item"><a href="#sobree" class="menu-link">SOBRE</a></li>
                 <li class="menu-item"><a href="#" class="menu-link">INICIO</a></li>
             </ul>
         </nav>
-     </aside>    
+     <!-- </aside>     -->
 
-    <!-- <div class="container">
-        
+    
+
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+     <script>
+         $(function(){
+             $(window).on("scroll", function(){
+                 if($(window).scrollTop()     > 100){
+                     $(".menu").addClass ("menuSecundario");
+                 }
+                 else{
+                     $(".menu").removeClass("menuSecundario")
+                 }
+             })
+         })
+     </script>
+
+    <!-- <div class="container">    
     <div class="Menuhamburger">
         <div class="line" id="line1"></div>
         <div class="line" id="line2"></div>
@@ -49,26 +77,43 @@
         <span>Fechar</span>
     </div> -->
 
-    
+    <section class="sessao-home" id="home">
     <header id="home">
-        <div class="img-wrapper">
+        <div class="img-wrapper1">
             <img src="Imagens/pag1.png" alt="">
       </div>
       <div class="banner">
         <h1>O Nosso alvo</h1>
         <h3>é o seu</h3>
         <h2 class="resulta">resultado!</h2>
-        <button class="btninicio"> <a href="#conhecimentos">Saiba mais</button>
-    </div>
-    </header>
+        <button class="btninicio"> <a href="#sobree">Saiba mais</button>
+            <a href="#sobree" id="link-top">
+                <!-- <i class="fas fa-arrow-up"></i> -->
+            </a>
 
+            <a href="#sobree" id="link-top2">
+                <!-- <i class="fas fa-arrow-up"></i> -->
+            </a>
+
+            <a href="#home" id="link-top3">
+                <!-- <i class="fas fa-arrow-up"></i> -->
+            </a>
+
+            <a href="#home" id="link-top4">
+                <!-- <i class="fas fa-arrow-up"></i> -->
+            </a>
+
+    
+</div>
+    </header>
+    </section>
     
 
         <section class="sessao-sobre" id="sobree">
             
             <div class="sobree">
                
-                <div class="img-wrapper">
+                <div class="img-wrapper2">
                     <img src="Imagens/pag2.png" alt=""> 
               </div>
               <h1>Sobre</h1>
@@ -80,9 +125,11 @@
                 <button class="bttrafego"> <a href="#">Gestão de trafégo</button>
                 </div>
 
-                    <div class="sobredois">   
-                <button class="bttrafego2"> <a href="#">Gestão des Social Media</button>
-                    </div>
+                    <!-- <div class="sobredois">   
+                <button class="bttrafego2"> <br href="#">Gestão de <br/>Social Media</button>
+                    </div> -->
+                
+                    <!-- <br/> NO MEIO QUEBRA A LINHA -->
 
                     <div class="conhecimento-text">
                         <p> Lorem ipsum dolor sit amet, consectetuer adipisc-
